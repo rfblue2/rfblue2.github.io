@@ -1,3 +1,10 @@
 title: Roland
 description: My personal Github Website
-theme: jekyll-theme-midnight
+base-url: /
+
+sass:
+  sass_dir: _sass
+  load_paths:
+    - _sass
+
+exclude: []

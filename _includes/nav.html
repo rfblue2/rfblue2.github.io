@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="mynav" class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          {% assign links = site.data.nav %}
+          {% for link in links %}
+            {% assign class = nil %}
+            {% if link.name == page.active %}
+              {% assign class = 'active' %}
+            {% endif %}
+            <li class="{{ class }}">
+              <a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+</nav>

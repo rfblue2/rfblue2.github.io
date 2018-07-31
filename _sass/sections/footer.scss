@@ -1,0 +1,22 @@
+footer {
+  height: $footer-height;
+  padding: 10px, 20px, 20px;
+  background-color: $deep-cerulean;
+  a {
+    margin: 20px 10px 20px;
+    color: $merino;
+    &:link &:visited &:active {
+      color: $merino;
+    }
+    &:hover {
+      color: white;
+    }
+    i {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+

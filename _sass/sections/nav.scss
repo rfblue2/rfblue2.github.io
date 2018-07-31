@@ -1,0 +1,20 @@
+nav {
+  background-color: $deep-cerulean;
+
+  #mynav {
+    .nav-link {
+      color: $merino; 
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .active {
+      .nav-link{
+        color: white;
+      }
+    }
+
+  }
+}

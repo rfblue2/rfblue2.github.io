@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog 
+active: blog
+---
+
+<div id="blog">
+  <h1>Roland's Blog</h1>
+  <p>If you're interested, you can read up on my random musings here.</p>
+  <ul>
+    {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+

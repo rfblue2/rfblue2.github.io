@@ -1,0 +1,31 @@
+---
+---
+
+@import 'variables';
+@import 'sections/nav';
+@import 'sections/footer';
+@import 'sections/home';
+@import 'sections/blog';
+@import 'sections/post';
+
+h1 {
+  font-family: $font-title;
+}
+
+h2 {
+  font-family: $font-subtitle;
+}
+
+h3 {
+  font-family: $font-subtitle;
+}
+
+html, body #override {
+  font-family: $font-body;
+}
+
+main {
+  min-height: calc(100vh - $footer-height);
+  padding-bottom: $footer-height;
+  margin: 100px 100px 0 100px;
+}
