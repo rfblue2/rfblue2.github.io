@@ -18,11 +18,21 @@ active: home
       learn and grow and to help others do the same.</p>
     </div>  
   </div>
-  <div class="row justify-content-center" id="construction">
-    <h1><i class="fab fa-simplybuilt"></i>This site is still under construction <i class="fab fa-simplybuilt"></i></h1>
+  <div class="row justify-content-center" id="blog-recent-title">
+    <h1>Recent Posts</h1>
   </div>
-  <div class="row justify-content-center">
-    <p>In the meantime, check out my <a href="/blog">blog</a>.</p>
+  <div class="row" id="blog-recent">
+    <div class="col-xs-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+      {% for post in site.posts limit:5 %}
+        <h3>{{ post.title }}</h3>
+        <span class="date">{{ page.date | date: "%m-/%-d/%Y" }}</span>
+        <p>
+        {{ post.content | split:'<!--break-->' | first }}
+        {% if post.content contains '<!--break-->' %}
+          ...<a href="{{ post.url }}">(More)</a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
   <!--<div class="row justify-content-center" id="values">
     <div class="col-xs-12 col-md-12">
