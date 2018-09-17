@@ -7,6 +7,7 @@
 @import 'sections/home';
 @import 'sections/blog';
 @import 'sections/post';
+@import 'sections/projects';
 
 h1 {
   font-family: $font-title;
@@ -20,12 +21,22 @@ h3 {
   font-family: $font-subtitle;
 }
 
-html, body #override {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
   font-family: $font-body;
 }
 
+#wrap {
+  min-height: 100%;
+}
+
 main {
-  min-height: calc(100vh - $footer-height);
   padding-bottom: $footer-height;
-  margin: 100px 10% 0;
+  margin: 100px 10% 100px;
+  overflow: auto;
 }

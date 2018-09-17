@@ -4,11 +4,13 @@
   {% include scripts.html %}
   <body id="override">
 
-    {% include nav.html %}
+    <div id="wrap">
+      {% include nav.html %}
 
-    <main class="content">
-    {{ content }}
-    </main>
+      <main class="content">
+      {{ content }}
+      </main>
+    </div>
 
     {% include footer.html %}
 
