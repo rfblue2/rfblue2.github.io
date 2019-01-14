@@ -5,15 +5,14 @@ footer {
   clear: both;
  
   padding: 10px 50px 20px;
-  background-color: $deep-cerulean;
   a {
     margin: 20px 10px 20px;
-    color: $merino;
+    color: black;
     &:link &:visited &:active {
-      color: $merino;
+      color: black;
     }
     &:hover {
-      color: white;
+      color: $merino;
     }
     i {
       display: inline-block;
