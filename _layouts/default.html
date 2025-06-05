@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include header.html %}
-  {% include scripts.html %}
-  <body id="override">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="{{ '/' | relative_url }}">home</a>
+        <a href="{{ '/projects' | relative_url }}">projects</a>
+    </nav>
 
-    <div id="wrap">
-      {% include nav.html %}
+    <main>
+        {{ content }}
+    </main>
 
-      <main class="content">
-      {{ content }}
-      </main>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Built with Jekyll.</p>
+    </footer>
+</body>
 </html>

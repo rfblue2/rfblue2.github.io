@@ -1,0 +1,65 @@
+- name: "TigerTexts"
+  description: "A web app that lists course textbook information, using the MERN (Mongo, Express, React, Node) stack."
+  technologies: ["MongoDB", "Express", "React", "Node.js"]
+  link: "https://www.tigertexts.io"
+  date: "2018-01-01"
+
+- name: "HackPrinceton Infrastructure"
+  description: "Responsible for maintaining and updating infrastructure, including the application program, host matching, acceptance scripts, and judging scripts. Dev lead Spring 2018."
+  technologies: ["Python", "JavaScript", "DevOps"]
+  link: "https://hackprinceton.com"
+  date: "2018-01-01"
+
+- name: "Princeton E-club Web Development"
+  description: "Co-directed the Web development team in maintaining websites, such as princetoneclub.com and icenetwork.io. Transformed the team to accept students of all experience levels and provide mentorship."
+  technologies: ["Web Development", "Leadership", "Mentorship"]
+  link: "https://princetoneclub.com"
+  date: "2017-01-01"
+
+- name: "Snake"
+  description: "A clone of the classic snake game using EaselJS. Special effects await those who score 100+."
+  technologies: ["JavaScript", "EaselJS", "HTML5"]
+  link: "https://rfblue2.github.io/snake"
+  date: "2017-01-01"
+
+- name: "Underwater Shooter"
+  description: "A rudimentary undersea themed sidescrolling shooter using EaselJS. Use arrow keys to move and space to shoot."
+  technologies: ["JavaScript", "EaselJS", "HTML5"]
+  link: "https://rfblue2.github.io/underwater-shooter"
+  date: "2017-01-01"
+
+- name: "CH Doc Viewer"
+  description: "A platform for reading and doing simple analyses with classical chinese texts, built over React and Flask."
+  technologies: ["React", "Flask", "Python"]
+  link: "https://ch-doc-viewer.herokuapp.com"
+  date: "2017-01-01"
+
+- name: "Princeton Band Website"
+  description: "Maintained the band's WordPress site."
+  technologies: ["WordPress", "Web Development"]
+  link: "https://puband.mycpanel.princeton.edu"
+  date: "2016-01-01"
+
+- name: "Volunteer Manager"
+  description: "A Java application for my local library to match volunteer tutors with students."
+  technologies: ["Java"]
+  link: "https://github.com/rfblue2/Volunteer-Manager"
+  date: "2016-01-01"
+
+- name: "PIC Microcontroller Disassembler"
+  description: "A Java program that disassembles PIC family microcontroller assembly code into machine code."
+  technologies: ["Java"]
+  link: "https://github.com/rfblue2/pic-disassembler"
+  date: "2015-01-01"
+
+- name: "The Math Game Project"
+  description: "A Java application designed to teach students basic number sense, which I led during high school."
+  technologies: ["Java", "Education"]
+  link: "https://github.com/Math-Game-MCA/Math-Game"
+  date: "2013-01-01"
+
+- name: "Cognify"
+  description: "An Android game of fitting shapes, for kids. Disclaimer - this project is very old, and not guaranteed to run well on Lollipop or later."
+  technologies: ["Java", "Android"]
+  link: "https://github.com/rfblue2/Cognify"
+  date: "2013-01-01" 

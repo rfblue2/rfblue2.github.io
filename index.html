@@ -1,64 +1,31 @@
 ---
 layout: default
-title: Homepage
-active: home
+title: Blog
 ---
-<div id="home" class="container-fluid">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 offset-md-1 col-lg-3 offset-lg-2">
-      <span class="float-right-md">
-        <img src="img/roland3-cropped.jpg" width="200px" class="img-thumbnail text-center"></img>
-      </span>
-    </div>  
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <h1>Hi!  I'm Roland.</h1>
-      <p>Call me whatever you'd like, student, developer, artist... I enjoy
-      meaningful and colorful pursuits.  On some days it might be coding a
-      small game.  On others it may be playing a note or two on my trumpet,
-      or the piano.  Still yet it may be a small doodle.  Most
-      importantly though, I want to learn and grow and help others do the same.
-      </p>
-    </div>  
-  </div>
-  <div class="row justify-content-center" id="blog-recent-title">
-    <h1>Recent Posts</h1>
-  </div>
-  <div class="row" id="blog-recent">
-    <div class="col-xs-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-      {% for post in site.posts limit:5 %}
-        <h3>{{ post.title }}</h3>
-        <span class="date">{{ page.date | date: "%m-/%-d/%Y" }}</span>
-        <p>
-        {{ post.content | split:'<!--break-->' | first }}
-        {% if post.content contains '<!--break-->' %}
-          ...<a href="{{ post.url }}">(More)</a>
+<div class="home">
+    <h1>Posts</h1>
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </time>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">← Previous</a>
         {% endif %}
-      {% endfor %}
+
+        <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next →</a>
+        {% endif %}
     </div>
-  </div>
-  <!--<div class="row justify-content-center" id="values">
-    <div class="col-xs-12 col-md-12">
-      <h2 id="core-values-heading" class="text-center">Core Values</h2>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <h3>Purpose</h3>
-      <p>Most dear to me is a sense of purpose, the idea that I want to push
-      forward with something meaningful to me.  This is the core value that
-      unites everything else for me, because I want everything I do to
-      have some kind of purpose.</p>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <h3>Empathy</h3>
-      <p>Trying to understand where others are coming from is one of the most
-      difficult things for me to do, but it's one of my core values because
-      being able to understand people is the first step in any social
-      relationship or conflict.</p>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <h3>Transparency</h3>
-      <p>It's okay to harbor secrets or disagreements, so long as
-      other people are not wrongly decieved by them.  I believe in making an
-      effort to ensure people understand you even if they may disagree.</p>
-    </div>
-  </div>-->
+    {% endif %}
 </div>
