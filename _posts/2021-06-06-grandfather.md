@@ -2,6 +2,7 @@
 layout: post
 title:  "A Conversation with my Grandfather"
 date:   2021-6-06 1:00:00 -0400
+draft: true
 ---
 
 A summer has already gone by, and another just turning the corner since my trip

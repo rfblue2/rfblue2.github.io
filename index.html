@@ -6,12 +6,14 @@ title: Blog
     <h1>Posts</h1>
     <ul class="post-list">
         {% for post in paginator.posts %}
-        <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
-                {{ post.date | date: "%B %-d, %Y" }}
-            </time>
-        </li>
+            {% unless post.draft %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
+                    {{ post.date | date: "%B %-d, %Y" }}
+                </time>
+            </li>
+            {% endunless %}
         {% endfor %}
     </ul>
 
